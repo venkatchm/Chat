@@ -1,6 +1,7 @@
 import express from "express" 
 
 const app = express();
+const PORT = process.env.PORT || 80;
 
 app.get("/healthcheck", (req, res): any => {
    
@@ -9,6 +10,6 @@ app.get("/healthcheck", (req, res): any => {
     })
 })
 
-app.listen(3000, () => {
-    console.log("server start running at 3000")
+app.listen(PORT, () => {
+    console.log(`server start running at ${PORT}`)
 });
